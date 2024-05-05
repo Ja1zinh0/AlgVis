@@ -34,10 +34,13 @@ import com.example.compose.md_theme_dark_onSecondary
 import com.example.compose.md_theme_dark_secondary
 import com.example.compose.md_theme_dark_secondaryContainer
 import com.ja1zinh0.algvis.R
+import com.ja1zinh0.algvis.ui.screens.signUp.signUpScreen
 
 
 @Composable
 fun HomeScreen(
+    onLoginClick: () -> Unit,
+    onSignUpClick: () -> Unit
 ) {
     Box(
         modifier = Modifier
@@ -74,7 +77,7 @@ fun HomeScreen(
             Row {
                 Column(modifier = Modifier.padding(top = 40.dp)) {
                     OutlinedButton(
-                        onClick = {},
+                        onClick = {onLoginClick()},
                         modifier = Modifier
                             .size(220.dp, 50.dp)
                             .border(
@@ -109,7 +112,7 @@ fun HomeScreen(
 
             Row(modifier = Modifier.padding(top = 15.dp)) {
                 OutlinedButton(
-                    onClick = {},
+                    onClick = {onSignUpClick()},
                     modifier = Modifier
                         .size(220.dp, 50.dp)
                         .border(
